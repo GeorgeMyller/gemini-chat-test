@@ -2,6 +2,8 @@
 
 A premium, modern chat application to test and interact with Google's Gemini models. Built with FastAPI and Vanilla JavaScript.
 
+[Versão em Português](README_pt-BR.md)
+
 ## 🌟 Features
 
 - **Premium UI**: Dark mode, glassmorphism design, and responsive layout.
