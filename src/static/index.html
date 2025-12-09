@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini API Tester</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar / Config -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-sparkles"></i>
+                <span>Gemini Tester</span>
+            </div>
+
+            <div class="config-section">
+                <label for="apiKey">API Key</label>
+                <div class="input-group">
+                    <input type="password" id="apiKey" placeholder="Enter your Gemini API Key">
+                    <button id="toggleKey" class="icon-btn"><i class="fa-solid fa-eye"></i></button>
+                </div>
+                <p class="hint">Your key is stored locally in your browser.</p>
+            </div>
+
+            <div class="config-section">
+                <label for="modelSelect">Model</label>
+                <select id="modelSelect">
+                    <option value="gemini-2.0-flash-exp">gemini-2.0-flash-exp</option>
+                    <option value="gemini-1.5-pro">gemini-1.5-pro</option>
+                    <option value="gemini-1.0-pro">gemini-1.0-pro</option>
+                </select>
+                <button id="refreshModels" class="secondary-btn">
+                    <i class="fa-solid fa-rotate"></i> Refresh Models
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-interface">
+            <header class="chat-header">
+                <div class="status-indicator online"></div>
+                <span id="currentModelDisplay">gemini-2.0-flash-exp</span>
+            </header>
+
+            <div id="chatHistory" class="chat-history">
+                <div class="message system">
+                    <div class="message-content">
+                        Welcome! Enter your API Key on the left to start testing Gemini.
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <form id="chatForm">
+                    <div class="input-wrapper">
+                        <textarea id="messageInput" placeholder="Type a message..." rows="1"></textarea>
+                        <button type="submit" id="sendBtn" disabled>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
